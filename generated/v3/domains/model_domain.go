@@ -17,7 +17,7 @@ import (
 // Domain struct for Domain
 type Domain struct {
 	PortalId                                     int32           `json:"portalId"`
-	Id                                           int64           `json:"id"`
+	Id                                           string           `json:"id"`
 	Created                                      int64           `json:"created"`
 	Updated                                      int64           `json:"updated"`
 	Domain                                       string          `json:"domain"`
@@ -82,7 +82,7 @@ type Domain struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewDomain(portalId int32, id int64, created int64, updated int64, domain string, primaryLandingPage bool, primaryEmail bool, primaryBlog bool, primaryBlogPost bool, primarySitePage bool, primaryKnowledge bool, primaryLegacyPage bool, primaryClickTracking bool, fullCategoryKey string, secondaryToDomain string, isResolving bool, isDnsCorrect bool, manuallyMarkedAsResolving bool, consecutiveNonResolvingCount int32, sslCname string, isSslEnabled bool, isSslOnly bool, certificateId int64, sslRequestId int64, isUsedForBlogPost bool, isUsedForSitePage bool, isUsedForLandingPage bool, isUsedForEmail bool, isUsedForKnowledge bool, setupTaskId int64, isSetupComplete bool, setUpLanguage string, teamIds []int64, actualCname string, correctCname string, actualIp string, apexResolutionStatus string, apexDomain string, publicSuffix string, apexIpAddresses []string, siteId int64, brandId int64, deletable bool, domainCdnConfig DomainCdnConfig, setupInfo DomainSetupInfo, derivedBrandName string, createdById int32, updatedById int32, label string, isAnyPrimary bool, isLegacyDomain bool, isInternalDomain bool, isResolvingInternalProperty bool, isResolvingIgnoringManuallyMarkedAsResolving bool, isUsedForAnyContentType bool, isLegacy bool, authorAt int64, cosObjectType string, cdnPurgeEmbargoTime int64, isStagingDomain bool) *Domain {
+func NewDomain(portalId int32, id string, created int64, updated int64, domain string, primaryLandingPage bool, primaryEmail bool, primaryBlog bool, primaryBlogPost bool, primarySitePage bool, primaryKnowledge bool, primaryLegacyPage bool, primaryClickTracking bool, fullCategoryKey string, secondaryToDomain string, isResolving bool, isDnsCorrect bool, manuallyMarkedAsResolving bool, consecutiveNonResolvingCount int32, sslCname string, isSslEnabled bool, isSslOnly bool, certificateId int64, sslRequestId int64, isUsedForBlogPost bool, isUsedForSitePage bool, isUsedForLandingPage bool, isUsedForEmail bool, isUsedForKnowledge bool, setupTaskId int64, isSetupComplete bool, setUpLanguage string, teamIds []int64, actualCname string, correctCname string, actualIp string, apexResolutionStatus string, apexDomain string, publicSuffix string, apexIpAddresses []string, siteId int64, brandId int64, deletable bool, domainCdnConfig DomainCdnConfig, setupInfo DomainSetupInfo, derivedBrandName string, createdById int32, updatedById int32, label string, isAnyPrimary bool, isLegacyDomain bool, isInternalDomain bool, isResolvingInternalProperty bool, isResolvingIgnoringManuallyMarkedAsResolving bool, isUsedForAnyContentType bool, isLegacy bool, authorAt int64, cosObjectType string, cdnPurgeEmbargoTime int64, isStagingDomain bool) *Domain {
 	this := Domain{}
 	this.PortalId = portalId
 	this.Id = id
@@ -180,9 +180,9 @@ func (o *Domain) SetPortalId(v int32) {
 }
 
 // GetId returns the Id field value
-func (o *Domain) GetId() int64 {
+func (o *Domain) GetId() string {
 	if o == nil {
-		var ret int64
+		var ret string
 		return ret
 	}
 
@@ -191,7 +191,7 @@ func (o *Domain) GetId() int64 {
 
 // GetIdOk returns a tuple with the Id field value
 // and a boolean to check if the value has been set.
-func (o *Domain) GetIdOk() (*int64, bool) {
+func (o *Domain) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -199,7 +199,7 @@ func (o *Domain) GetIdOk() (*int64, bool) {
 }
 
 // SetId sets field value
-func (o *Domain) SetId(v int64) {
+func (o *Domain) SetId(v string) {
 	o.Id = v
 }
 
