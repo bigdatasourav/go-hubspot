@@ -93,7 +93,7 @@ type BlogPost struct {
 	// Optional override to set the URL to be used in the rel=canonical link tag on the page.
 	LinkRelCanonicalUrl string `json:"linkRelCanonicalUrl"`
 	// An ENUM descibing the type of this object. Should always be BLOG_POST.
-	ContentTypeCategory string `json:"contentTypeCategory"`
+	ContentTypeCategory int64 `json:"contentTypeCategory"`
 	// List of stylesheets to attach to this blog post. These stylesheets are attached to just this page. Order of precedence is bottom to top, just like in the HTML.
 	AttachedStylesheets []map[string]map[string]interface{} `json:"attachedStylesheets"`
 	// A description that goes in <meta> tag on the page.
@@ -128,7 +128,7 @@ type BlogPost struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBlogPost(id string, slug string, contentGroupId string, campaign string, categoryId int32, state string, name string, mabExperimentId string, archived bool, authorName string, abTestId string, createdById string, updatedById string, domain string, abStatus string, folderId string, widgetContainers map[string]map[string]interface{}, widgets map[string]map[string]interface{}, language string, translatedFromId string, translations map[string]ContentLanguageVariation, dynamicPageDataSourceType int32, dynamicPageDataSourceId string, blogAuthorId string, tagIds []int64, htmlTitle string, enableGoogleAmpOutputOverride bool, useFeaturedImage bool, postBody string, postSummary string, rssBody string, rssSummary string, currentlyPublished bool, pageExpiryEnabled bool, pageExpiryRedirectId int64, pageExpiryRedirectUrl string, pageExpiryDate int64, includeDefaultCustomCss bool, enableLayoutStylesheets bool, enableDomainStylesheets bool, publishImmediately bool, featuredImage string, featuredImageAltText string, linkRelCanonicalUrl string, contentTypeCategory string, attachedStylesheets []map[string]map[string]interface{}, metaDescription string, headHtml string, footerHtml string, archivedInDashboard bool, publicAccessRulesEnabled bool, publicAccessRules []map[string]interface{}, layoutSections map[string]LayoutSection, themeSettingsValues map[string]map[string]interface{}, url string, password string, currentState string, publishDate time.Time, created time.Time, updated time.Time, deletedAt time.Time) *BlogPost {
+func NewBlogPost(id string, slug string, contentGroupId string, campaign string, categoryId int32, state string, name string, mabExperimentId string, archived bool, authorName string, abTestId string, createdById string, updatedById string, domain string, abStatus string, folderId string, widgetContainers map[string]map[string]interface{}, widgets map[string]map[string]interface{}, language string, translatedFromId string, translations map[string]ContentLanguageVariation, dynamicPageDataSourceType int32, dynamicPageDataSourceId string, blogAuthorId string, tagIds []int64, htmlTitle string, enableGoogleAmpOutputOverride bool, useFeaturedImage bool, postBody string, postSummary string, rssBody string, rssSummary string, currentlyPublished bool, pageExpiryEnabled bool, pageExpiryRedirectId int64, pageExpiryRedirectUrl string, pageExpiryDate int64, includeDefaultCustomCss bool, enableLayoutStylesheets bool, enableDomainStylesheets bool, publishImmediately bool, featuredImage string, featuredImageAltText string, linkRelCanonicalUrl string, contentTypeCategory int64, attachedStylesheets []map[string]map[string]interface{}, metaDescription string, headHtml string, footerHtml string, archivedInDashboard bool, publicAccessRulesEnabled bool, publicAccessRules []map[string]interface{}, layoutSections map[string]LayoutSection, themeSettingsValues map[string]map[string]interface{}, url string, password string, currentState string, publishDate time.Time, created time.Time, updated time.Time, deletedAt time.Time) *BlogPost {
 	this := BlogPost{}
 	this.Id = id
 	this.Slug = slug
@@ -1259,9 +1259,9 @@ func (o *BlogPost) SetLinkRelCanonicalUrl(v string) {
 }
 
 // GetContentTypeCategory returns the ContentTypeCategory field value
-func (o *BlogPost) GetContentTypeCategory() string {
+func (o *BlogPost) GetContentTypeCategory() int64 {
 	if o == nil {
-		var ret string
+		var ret int64
 		return ret
 	}
 
@@ -1270,7 +1270,7 @@ func (o *BlogPost) GetContentTypeCategory() string {
 
 // GetContentTypeCategoryOk returns a tuple with the ContentTypeCategory field value
 // and a boolean to check if the value has been set.
-func (o *BlogPost) GetContentTypeCategoryOk() (*string, bool) {
+func (o *BlogPost) GetContentTypeCategoryOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -1278,7 +1278,7 @@ func (o *BlogPost) GetContentTypeCategoryOk() (*string, bool) {
 }
 
 // SetContentTypeCategory sets field value
-func (o *BlogPost) SetContentTypeCategory(v string) {
+func (o *BlogPost) SetContentTypeCategory(v int64) {
 	o.ContentTypeCategory = v
 }
 
